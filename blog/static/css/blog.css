@@ -62,9 +62,3 @@ h1 a, h2 a {
 .post h2 a, .post h2 a:visited {
     color: #FE8300;
 }
-
-.options-bar{
-    width: 100%;
-    color: white;
-    text-decoration: none;
-}

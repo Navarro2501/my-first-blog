@@ -11,21 +11,22 @@
         <div class="page-header"> 
         {% if user.is_authenticated %}
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
         {% endif %}            
             <h1><a href="/">オレンジ色の少年の冒険</a></h1>            
             <div class="row text-align-middle">
             {% if request.user.is_anonymous %}
-                <div class="col-sm-2 options-bar">
+                <div class="col-sm-2">
                     <h4 class="link"><a href="{%url 'login'%}" class="link">Iniciar Sesión</a></h4>
                 </div>
-                <div class="col-sm-2 options-bar">
+                <div class="col-sm-2">
                     <h4 class="link"><a href="{%url 'sign_up'%}" class="link">Registrarse</a></h4>
                 </div>
             {% elif user.is_authenticated%}
-                <div class="col-sm-2 options-bar">
+                <div class="col-sm-2">
                     <h4 class="link">Bienvenido, {{user.username}}</h4>
                 </div>
-                <div class="col-sm-2 options-bar">
+                <div class="col-sm-2">
                     <h4 class="link"><a href={%url 'logout'%} >Cerrar Sesión</a></h4>
                 </div>
             {% endif %}
